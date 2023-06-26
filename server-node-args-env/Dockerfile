@@ -1,0 +1,12 @@
+FROM node:18.16
+
+WORKDIR /app
+
+ARG PORTA_ARG=4567
+ENV PORTA=${PORTA_ARG}
+
+COPY . /app
+
+EXPOSE ${PORTA_ARG}
+
+CMD ["npm", "start"]
